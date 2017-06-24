@@ -15,3 +15,15 @@
     git commit -m "提示信息"
     git remote add origin git@github.com:kuangggg/kuangggg.github.io.git //将本地这个库和 github 上的库关联
     git push -u origin master //推送到远程库主分支 第一次提交-u
+
+## 提交修改
+    git status  //查看状态
+    git diff file.txt  //查看修改
+    git add //提交修改
+    git push origin master  //推送
+
+## 分支相关
+    git chechout -b dev  //创建dev分支，然后切换到dev分支
+    git branch //查看当前分支
+    git merge name //合并某分支到当前分支
+    git branch -d name //删除分支
