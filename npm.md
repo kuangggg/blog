@@ -1,3 +1,10 @@
+---
+title: npm
+date: 2017-06-25 16:11:44
+categories: js
+tags: npm
+---
+
 ## npm 是什么
 [**npm**](https://docs.npmjs.com/)（node package manager）是**nodejs**的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）
 ## 使用 npm 安装插件
