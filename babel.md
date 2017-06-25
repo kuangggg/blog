@@ -2,7 +2,7 @@
 title: babel
 date: 2017-06-25 22:55:23
 categories: js
-tags: babel
+tags: babel es6
 ---
 
 参考 [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)  [http://babeljs.io/](http://babeljs.io/)
