@@ -44,5 +44,5 @@ tags: hexo
 	git clone https://github.com/iissnan/hexo-theme-next themes/next
 #### 修改默认主题配置
 	theme: next
-#### 清楚原有主题缓存
+#### 清除原有主题缓存
 	hexo clean
