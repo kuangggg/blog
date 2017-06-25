@@ -1,3 +1,10 @@
+---
+title: babel
+date: 2017-06-25 22:55:23
+categories: js
+tags: babel
+---
+
 参考 [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 ## 配置.babelrc 文件
 
