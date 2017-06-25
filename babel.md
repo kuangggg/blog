@@ -5,7 +5,9 @@ categories: js
 tags: babel
 ---
 
-参考 [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
+参考 [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)  [http://babeljs.io/](http://babeljs.io/)
+## babel 是什么
+Babel是一个广泛使用的转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
 ## 配置.babelrc 文件
 
 该文件用来设置转码规则和插件，放置在根目录下，格式如下
