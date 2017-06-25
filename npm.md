@@ -28,6 +28,6 @@ tags: npm
 
 
 
-### 使用 cnpm
+## 使用 cnpm
 	npm install cnpm -g --registry=https://registry.npm.taobao.org
 > npm 默认从 [http://registry.npmjs.org](http://registry.npmjs.org) 下载插件，国外网站经常异常所以指定淘宝的插件镜像
