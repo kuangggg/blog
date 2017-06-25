@@ -23,6 +23,7 @@ presets字段设定转码规则根据需要添加，这里只添加 es2015 和 s
 
 ## 使用命令行工具 **babel-cli** 转码
 > 此处将 babel-cli 安装到项目目录下，解决了项目对全局环境的依赖
+
     cnpm install --save-dev babel-cli
 
 ### 修改 package.json 文件
