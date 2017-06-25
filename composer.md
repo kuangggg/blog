@@ -1,7 +1,8 @@
 ---
 title: composer
 date: 2017-06-24 08:55:23
-tags:
+categories: tool
+tags: composer
 ---
 ### 下载 [composer.phar](https://getcomposer.org/composer.phar)
 

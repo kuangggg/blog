@@ -1,6 +1,7 @@
 ---
 title: sublime
 date: 2017-06-24 07:22:09
+categories: tool
 tags: sublime
 ---
 

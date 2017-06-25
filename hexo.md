@@ -1,6 +1,7 @@
 ---
 title: hexo 搭建个人博客
 date: 2017-06-24 07:23:56
+categories: tool
 tags: hexo
 ---
 
