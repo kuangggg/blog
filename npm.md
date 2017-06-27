@@ -9,6 +9,8 @@ tags: npm
 [**npm**](https://docs.npmjs.com/)（node package manager）是**nodejs**的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）
 ## 使用 npm 安装插件
 	npm install <name> [-g] [--save-dev]
+> --save-dev 是你开发时候依赖的东西，--save 是你发布之后还依赖的东西。举个栗子，jquery 是你开发用的，但是上限后依然依赖的。babel 只是开发时候用来编译js的上线后就完全没用所以用 --save-dev
+
 `-g`：全局安装。
 将会安装在C:\Users\Administrator\AppData\Roaming\npm，并且写入系统环境变量； 非全局安装：将会安装在当前定位目录； 全局安装可以通过命令行在任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过require()调用；
 
