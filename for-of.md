@@ -1,6 +1,8 @@
 ---
 title: ES6 数组遍历 for-of
-
+date: 2017-06-28 17:35:23
+categories: js
+tags: js es6
 ---
 
 ## 数组循环常规写法
