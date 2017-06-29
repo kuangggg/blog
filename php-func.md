@@ -92,6 +92,87 @@
 
 ## 正则
 
+## 函数处理 函数
+### [call_user_func_array](http://php.net/manual/zh/function.call-user-func-array.php)
+
+把第一个参数作为回调函数，第二个参数作为回调函数的参数，以数组形式传入传入
+``` php
+
+    function call1($param1, $param2)
+    {
+        echo $param1, '&',$param2;
+    }
+
+    call_user_func_array('call1', [1, 2]);
+    //1&2
+
+    class Test
+    {
+        function call1($p1, $p2)
+        {
+            echo __FUNCTION__, '&', $p1, '&', $p2;
+        }
+
+        static function call2($p1, $p2)
+        {
+            echo __FUNCTION__, '&', $p1, '&', $p2;
+        }
+    }
+
+    $test = new Test();
+    call_user_func_array([$test, "call1"], [1, 2]);
+    //call1&1&2
+
+    call_user_func_array(['Test', 'call2'], [1, 2]);
+    //call2&1&2
+
+
+```
+
+### [call_user_func](http://php.net/manual/zh/function.call-user-func.php)
+
+第一个参数作为回调函数调用
+> 同 **call_user_func_array** 差不多，只是除过第一个参数是回调函数，其余都是参数
+> 一个参数的回调或者没有参数的回调使用比较合适
+
+### [func_get_args](http://php.net/manual/zh/function.func-get-args.php)
+返回函数参数列表的数组
+``` php
+
+    function test()
+    {
+        p(func_get_args());
+    }
+
+    test('test', '1');
+    // Array
+    // (
+    //     [0] => test
+    //     [1] => 1
+    // )
+
+```
+### [func_num_args](http://php.net/manual/zh/function.func-num-args.php)
+获取函数传入参数数目
+### [func_get_arg](http://php.net/manual/zh/function.func-get-arg.php)
+获取参数列表某一项
+```php
+
+    function test()
+    {
+        $list = func_get_args();
+        for($i = 0; $i < func_num_args(); $i++) {
+            echo '[', $i, '] => ', func_get_arg($i), '<br/>';
+        }
+    }
+    test('p1', 'p2', 3);
+    // [0] => p1
+    // [1] => p2
+    // [2] => 3
+
+```
+
+
 ## 杂项
 
 ### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
