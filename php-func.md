@@ -1,9 +1,6 @@
-# php 常用函数总结
-
 
 
 ## url 处理
-
 ### [http_build_query](http://php.net/manual/zh/function.http-build-query.php)
 生成 URL-encode 之后的请求字符串
 ### [parse_url](http://php.net/manual/zh/function.parse-url.php)
@@ -93,8 +90,9 @@
 ## 正则
 
 ## 函数处理 函数
+### [function_exists](http://php.net/manual/zh/function.function-exists.php)
+函数是否定义，包括用户自定义函数。
 ### [call_user_func_array](http://php.net/manual/zh/function.call-user-func-array.php)
-
 把第一个参数作为回调函数，第二个参数作为回调函数的参数，以数组形式传入传入
 ``` php
 
@@ -128,13 +126,9 @@
 
 
 ```
-
 ### [call_user_func](http://php.net/manual/zh/function.call-user-func.php)
-
-第一个参数作为回调函数调用
-> 同 **call_user_func_array** 差不多，只是除过第一个参数是回调函数，其余都是参数
-> 一个参数的回调或者没有参数的回调使用比较合适
-
+> 同 **call_user_func_array** 差不多，只是除过第一个参数是回调函数，其余都是参数,
+> 对于只有一个参数的回调或者没有参数的回调使用比较合适
 ### [func_get_args](http://php.net/manual/zh/function.func-get-args.php)
 返回函数参数列表的数组
 ``` php
@@ -174,10 +168,8 @@
 
 
 ## 杂项
-
 ### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
 检查一个扩展是否已经加载
-
 ```php
 
     if(!extension_loaded('mbstring')) {
