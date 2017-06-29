@@ -19,8 +19,6 @@
 ``` php
 
     $url = 'http://www.example.com/path?googleguy=googley#g1';
-
-    print_r(parse_url($url));
     // Array
     // (
     //     [scheme] => http
@@ -88,10 +86,26 @@
 
 
 
+
 ## 数组相关
 
 
 ## 正则
+
+## 杂项
+
+### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
+检查一个扩展是否已经加载
+
+```php
+
+    if(!extension_loaded('mbstring')) {
+        //不能用mb_strlen()计算中文字串长度
+    }
+
+```
+
+
 
 ## To be continued
 
