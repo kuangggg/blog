@@ -1,5 +1,5 @@
 
-
+> 不积跬步无以至千里
 ## url 处理
 ### [http_build_query](http://php.net/manual/zh/function.http-build-query.php)
 生成 URL-encode 之后的请求字符串
@@ -80,14 +80,178 @@
 返回路径中的目录部分
 
 ## 字符串相关
+### [strtolower](http://php.net/manual/zh/function.strtolower.php)/[strtoupper](http://php.net/manual/zh/function.strtoupper.php)/[ucfirst](http://php.net/manual/zh/function.ucfirst.php)/[ucwords](http://php.net/manual/zh/function.ucwords.php)
+字符串全部字符转化为小写/大写/字符串首字母转化为大写/将字符串中每个单词的首字母转换为大写
+``` php
 
+    $str = 'hello woLd Vue';
+    echo strtolower($str), '<br/>';
+    echo strtoupper($str), '<br/>';
+    echo ucwords($str), '<br/>';
+    echo ucfirst($str);
 
+    // hello wold vue
+    // HELLO WOLD VUE
+    // Hello WoLd Vue
+    // Hello woLd Vue
 
+```
+### [strlen](http://php.net/manual/zh/function.strlen.php)/[mb_strlen](http://php.net/manual/zh/function.mb-strlen.php)
+``` php
+
+    $str = 'hello 中国';
+    //utf-8 编码一个字符三个字节
+    echo strlen($str), '<br/>';
+    echo mb_strlen($str);
+    // 12
+    // 8
+
+```
+
+### [str_split](http://php.net/manual/zh/function.str-split.php)/[explode](http://php.net/manual/zh/function.explode.php)
+将字符串按指定长度切割成数组/按照分隔符切分字符串成数组
+``` php
+
+    $str = 'hello';
+
+    p(str_split($str));
+    // Array
+    // (
+    //     [0] => h
+    //     [1] => e
+    //     [2] => l
+    //     [3] => l
+    //     [4] => o
+    // )
+    p(str_split($str, 2));
+    // Array
+    // (
+    //     [0] => he
+    //     [1] => ll
+    //     [2] => o
+    // )
+
+```
+
+### [strpos](http://php.net/manual/zh/function.strpos.php)/[stripos](http://php.net/manual/zh/function.stripos.php)/[strrpos](http://php.net/manual/zh/function.strrpos.php)
+
+查找字符串首次出现的位置/最后一次出现位置/忽略大小写
+
+``` php
+
+    $str = 'good good study, day day up';
+
+    var_dump(strpos($str, 'good') == false);
+    var_dump(strpos($str, 'good') == 0);
+    var_dump(strpos($str, 'good') === false);
+    // bool(true) bool(true) bool(false) 
+
+```
+
+### [substr](http://php.net/manual/zh/function.substr.php)
+返回字符串的字串
+``` php
+
+    $str = 'hello world';
+
+    p(substr($str, 6)); //world
+    p(substr($str, 6, 2)); //wo
+    p(substr($str, -1)); //d
+    p(substr($str, -2, 1)); //l
+
+```
+### [substr_replace](http://php.net/manual/zh/function.substr-replace.php)
+替换字符串的字串
+``` php
+
+    $str = 'hello world';
+
+    p(substr_replace($str, 'php', 6)); 
+    p(substr_replace($str, '&', 5, 1));
+
+    // hello php
+    // hello&world
+
+```
+
+### [sprintf](http://php.net/manual/zh/function.sprintf.php)
+返回格式化的字符串
+
+- %b 二进制
+- %c ASCII 字符
+- %f 浮点型
+- %s 字符串
+- %o 八进制
+- %x 十六进制
+- %d 十进制
+- %% 百分号
+
+``` php
+
+    $str = sprintf('%s, %f, %.2f, %c', 'abcd', 12, 12.2345, 64);
+
+    p($str);
+    // abcd, 12.000000, 12.23, @
+
+```
+
+### [htmlentities](http://php.net/manual/zh/function.htmlentities.php)
+将所有可以转化 html 实体符号的都转化
+
+### [htmlspecialchars](http://php.net/manual/zh/function.htmlspecialchars.php)
+将特殊字符转换为 HTML 实体
+- `& &amp;`
+- `" &quot;`
+- `' &apos;`
+- `< &lt;`
+- `> &gt`;
+``` php
+
+    $str='<a href="test.html">\'测试页面©\'</a><script>alert(213)</script>'; 
+
+    //并没有转义单引号,直接执行脚本
+    p($str);
+    //过滤
+    p(htmlentities($str));
+    p(htmlspecialchars($str));
+    //单引号也转义
+    p(htmlentities($str, ENT_QUOTES, 'UTF-8'));
+
+```
+### [strip_tags](http://php.net/manual/zh/function.strip-tags.php)
+从字符串中去除 HTML 和 PHP 标记
+``` php
+
+    $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
+
+    p(strip_tags($text));  
+    p(strip_tags($text, '<p><a>'));
+
+    // Test paragraph. Other text
+    // Test paragraph.
+
+```
 
 ## 数组相关
 
 
 ## 正则
+### [preg_split](http://php.net/manual/zh/function.preg-split.php)
+正则匹配分割字符串
+``` php
+
+    $str = "hello world\t  prge";
+    $arr = preg_split('/[\s,]+/', $str);
+    p($arr);
+    // Array
+    // (
+    //     [0] => hello
+    //     [1] => world
+    //     [2] => prge
+    // )
+
+```php
+
 
 ## 函数处理 函数
 ### [function_exists](http://php.net/manual/zh/function.function-exists.php)
