@@ -1,4 +1,9 @@
-
+---
+title: php 常用函数积累
+date: 2017-6-30 12:00
+categories: php
+tags: 函数
+---
 > 不积跬步无以至千里
 ## url 处理
 ### [http_build_query](http://php.net/manual/zh/function.http-build-query.php)
