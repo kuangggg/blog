@@ -342,7 +342,16 @@
     // [2] => 3
 
 ```
+## 文件相关
+### [file](http://php.net/manual/zh/function.file.php)
+将文件读入到数组中
+``` php
 
+    p(file('demo1.txt'));
+    //在数组每个元素的末尾不要添加换行符  / 跳过空行
+    p(file('demo1.txt',  FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+
+```
 
 ## 杂项
 ### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
@@ -355,15 +364,7 @@
 
 ```
 
-### [file](http://php.net/manual/zh/function.file.php)
-将文件读入到数组中
-``` php
 
-    p(file('demo1.txt'));
-    //在数组每个元素的末尾不要添加换行符  / 跳过空行
-    p(file('demo1.txt',  FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
-
-```
 
 ## To be continued
 
