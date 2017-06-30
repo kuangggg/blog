@@ -45,39 +45,9 @@
 
 ```
 
-## 文件路径相关
 
-### [pathinfo](http://php.net/manual/zh/function.pathinfo.php)
-返回文件路径的信息
-``` php
 
-    $path = pathinfo('/demo/test.php');
-    p($path);
-    // Array
-    // (
-    //     [dirname] => /demo
-    //     [basename] => test.php
-    //     [extension] => php
-    //     [filename] => test
-    // )
 
-```
-### [basename](http://php.net/manual/zh/function.basename.php)
-返回路径中的文件名部分
-
-``` php
-
-    $file = basename('/demo/test.php');
-    $name = basename('/demo/test.php', '.php'); //如果文件名同 第二个参数相同也会被去掉
-
-    echo $file, '<br/>', $name;
-    // test.php
-    // test
-
-```
-
-### [dirname](http://php.net/manual/zh/function.dirname.php)
-返回路径中的目录部分
 
 ## 字符串相关
 ### [strtolower](http://php.net/manual/zh/function.strtolower.php)/[strtoupper](http://php.net/manual/zh/function.strtoupper.php)/[ucfirst](http://php.net/manual/zh/function.ucfirst.php)/[ucwords](http://php.net/manual/zh/function.ucwords.php)
@@ -266,7 +236,8 @@
 ```php
 
 
-## 函数处理 函数
+## 函数处理
+
 ### [function_exists](http://php.net/manual/zh/function.function-exists.php)
 函数是否定义，包括用户自定义函数。
 ### [call_user_func_array](http://php.net/manual/zh/function.call-user-func-array.php)
@@ -343,6 +314,7 @@
 
 ```
 ## 文件相关
+
 ### [file](http://php.net/manual/zh/function.file.php)
 将文件读入到数组中
 ``` php
@@ -352,6 +324,38 @@
     p(file('demo1.txt',  FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
 
 ```
+
+### [pathinfo](http://php.net/manual/zh/function.pathinfo.php)
+返回文件路径的信息
+``` php
+
+    $path = pathinfo('/demo/test.php');
+    p($path);
+    // Array
+    // (
+    //     [dirname] => /demo
+    //     [basename] => test.php
+    //     [extension] => php
+    //     [filename] => test
+    // )
+
+```
+### [basename](http://php.net/manual/zh/function.basename.php)
+返回路径中的文件名部分
+
+``` php
+
+    $file = basename('/demo/test.php');
+    $name = basename('/demo/test.php', '.php'); //如果文件名同 第二个参数相同也会被去掉
+
+    echo $file, '<br/>', $name;
+    // test.php
+    // test
+
+```
+
+### [dirname](http://php.net/manual/zh/function.dirname.php)
+返回路径中的目录部分
 
 ## 杂项
 ### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
