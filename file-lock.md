@@ -1,10 +1,10 @@
-
 ---
 title: php 文件锁的简单实现
 data: 2017-07-01 3:24
 categories: php
 tags: lock 并发
 ---
+
 ### 文件锁是什么
 [**flock**](http://php.net/manual/zh/function.flock.php)轻便的咨询文件锁定
 
