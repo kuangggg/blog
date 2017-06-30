@@ -231,6 +231,19 @@
     // Test paragraph.
 
 ```
+### [trim](http://php.net/manual/zh/function.trim.php)/[rtrim](http://php.net/manual/zh/function.rtrim.php)/[ltrim](http://php.net/manual/zh/function.ltrim.php)
+去除空白符
+### [str_shuffle](http://php.net/manual/zh/function.str-shuffle.php)
+随机打乱一个字符串
+``` php
+
+    $str = 'abcdef';
+    str_shuffle($str);
+
+```
+### [strrev](http://php.net/manual/zh/function.strrev.php)
+翻转字符串
+
 
 ## 数组相关
 
@@ -342,7 +355,15 @@
 
 ```
 
+### [file](http://php.net/manual/zh/function.file.php)
+将文件读入到数组中
+``` php
 
+    p(file('demo1.txt'));
+    //在数组每个元素的末尾不要添加换行符  / 跳过空行
+    p(file('demo1.txt',  FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+
+```
 
 ## To be continued
 
