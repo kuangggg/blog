@@ -7,7 +7,7 @@ tags: sql
 
 ## SQL 增删改查
 
-``` shell
+``` mysql
 
     create database [db_name];
 
@@ -62,7 +62,7 @@ tags: sql
 
 > 尽量在表设计之初就确定好结构，修改是下下策
 
-``` shell
+``` mysql
 
     //删除列
     alter table [tb_name] drop [field]
@@ -90,14 +90,17 @@ tags: sql
 
 ## 杂项
 
-``` shell
+``` mysql
 
     //查询负载过高语句
     show process
+    
+```
+``` mysql
 
     //分析sql执行
     explain [sql]
-    
+
 ```
 - table：显示这一行的数据是关于哪张表的
 - type：这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为const、eq_reg、ref、range、 indexhe和ALL
