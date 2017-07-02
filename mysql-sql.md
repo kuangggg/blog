@@ -26,6 +26,8 @@ tags: sql
     //聚合函数
     select count([field]) from [tb_name];
     select * from [tb_name] limit [num];
+    //默认将 int 型转化为 Y-m-d H:i:s 格式,
+    select from_unixtime(time, '%Y-%m-%d') from [tb_name];
 
 
     //批量插入
