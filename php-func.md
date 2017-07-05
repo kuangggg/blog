@@ -362,6 +362,37 @@ tags: 函数
 ### [dirname](http://php.net/manual/zh/function.dirname.php)
 返回路径中的目录部分
 
+## msyql  常用函数
+
+### [防止sql注入](http://www.cnblogs.com/mafeng/p/5939329.html)
+
+
+### [mysql_connect](http://php.net/manual/zh/function.mysql-connect.php)
+打开一个 mysql 服务器的连接
+
+### [mysql_select_db](http://php.net/manual/zh/function.mysql-select-db.php)
+选择一个mysql库
+
+### [mysql_query](http://php.net/manual/zh/function.mysql-query.php)
+发送一条mysql查询
+
+### [mysql_error](http://php.net/manual/zh/function.mysql-error.php)
+返回上一个 MySQL 操作产生的文本错误信息
+
+### [mysql_real_escape_string](http://php.net/manual/zh/function.mysql-real-escape-string.php)
+转义 SQL 语句中使用的字符串中的特殊字符，并考虑到连接的当前字符集 
+
+### [msyql_fetch_array](http://php.net/manual/zh/function.mysql-fetch-array.php)
+从结果集中获得一行作为关联数组和数字数组 ,MYSQL_ASSOC关联数组*mysql_fetch_assoc*  MYSQL_NUM索引数组*mysql_fetch_row*
+
+### [mysql_num_rows](http://php.net/manual/zh/function.mysql-num-rows.php)
+返回结果集中的行数目
+
+### [mysql_affected_rows](http://php.net/manual/zh/function.mysql-affected-rows.php)
+取得前一次 MySQL 操作所影响的记录行数
+
+
+
 ## 杂项
 ### [extension_loaded](http://php.net/manual/zh/function.extension-loaded.php)
 检查一个扩展是否已经加载
