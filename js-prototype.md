@@ -1,5 +1,10 @@
 
-
+---
+title: js 原型对象分析总结
+date: 2017-7-8 11:03:24
+categories: js
+tags: prototype js __proto__
+---
 
 
 
