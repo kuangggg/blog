@@ -76,7 +76,28 @@ js 中每个对象(null 除外)都和另一个对象关联，这里的另一个�
 
 
 ## 理解 constructor 和 prototype __proto__ 在构造函数创建对象中的关系
+![prototype](https://kuangggg.github.io/images/blog/170708/js-prototype.png)
 
+这里注意属性里存放地址的指向
+
+``` javascript
+
+    function F()
+    {
+
+    }
+
+    var o = new F();
+
+    p(F.prototype === o.__proto__); //true
+    p(F.prototype.constructor === F); //true
+
+```
+引用网上最流行的一张图分析
+![prototype](https://kuangggg.github.io/images/blog/170708/1.png)
+- 对象都具有一个 __proto__ 属性,指向构造该对象的 构造函数的 原型
+- 构造函数除了 __proto__ 外还包含 一个原型属性 prototype,指向一个对象，这个对象称为原型对象
+- 原型对象中有个属性 constructor ,又指会到构造函数
 
 
 
