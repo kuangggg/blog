@@ -91,6 +91,7 @@ js 中每个对象(null 除外)都和另一个对象关联，这里的另一个�
 
     p(F.prototype === o.__proto__); //true
     p(F.prototype.constructor === F); //true
+    p(F.__proto__ === Function.prototype); //true
 
 ```
 
