@@ -1,12 +1,9 @@
-
 ---
 title: js 原型对象分析总结
 date: 2017-7-8 11:03:24
 categories: js
 tags: prototype js __proto__
 ---
-
-
 
 ## 前言
 关于 `__proto__ prototype constructor` 的概念，网上有太多说辞，有些都上升到了哲学的地步，什么万物始于null,js 全是对象,鸡生蛋蛋生鸡。在我看来只是一千个读者眼中的哈姆雷特,要完全理解必须追根溯源。
