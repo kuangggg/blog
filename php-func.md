@@ -370,8 +370,20 @@ tags: 函数
 ### [mysql_connect](http://php.net/manual/zh/function.mysql-connect.php)
 打开一个 mysql 服务器的连接
 
+### [mysql_set_charset](http://php.net/manual/en/function.mysql-set-charset.php)
+设置客户端连接字符集
+
 ### [mysql_select_db](http://php.net/manual/zh/function.mysql-select-db.php)
 选择一个mysql库
+``` php
+
+    $link = mysql_connect('localhost', 'root', '123456');
+
+    mysql_set_charset('utf8', $link);
+
+    mysql_select_db('test', $link) or die(mysql_error());
+
+```
 
 ### [mysql_query](http://php.net/manual/zh/function.mysql-query.php)
 发送一条mysql查询
